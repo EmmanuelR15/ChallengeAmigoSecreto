@@ -1,0 +1,292 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilo tecnológico y minimalista para Amigo Secreto */
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  font-family: 'Inter', 'Merriweather', sans-serif;
+  color: #f5f6fa;
+  min-height: 100vh;
+}
+
+.main-content {
+  max-width: 540px;
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  background: rgba(34, 40, 49, 0.85);
+  border-radius: 36px;
+  box-shadow: 0 12px 36px 0 rgba(31, 38, 135, 0.25);
+  padding: 56px 44px 44px 44px;
+  backdrop-filter: blur(8px);
+  border: 1.5px solid #00adb544;
+  animation: fadeIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+  overflow: hidden;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.header-banner img {
+  width: 70px;
+  margin-top: 8px;
+  filter: drop-shadow(0 2px 8px #00adb5aa);
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  color: #00adb5;
+}
+
+/* Sección de entrada */
+.input-section {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Títulos */
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #00adb5;
+  text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.input-name {
+  flex: 1;
+  padding: 16px 22px;
+  border-radius: 10px;
+  border: 1.5px solid #00adb5;
+  background: #232526;
+  color: #f5f6fa;
+  font-size: 1.2rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10) inset;
+}
+.input-name:focus {
+  border: 2px solid #00adb5;
+  box-shadow: 0 0 0 2px #00adb5, 0 2px 8px rgba(0,0,0,0.10) inset;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* Estilos de botón */
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add, .button-draw {
+  background: #00adb5;
+  color: #232526;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 32px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,173,181,0.12);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.button-add::before {
+  content: "➕";
+  font-size: 1.1em;
+}
+.button-draw::before {
+  content: "🎲";
+  font-size: 1.1em;
+}
+.button-add:hover, .button-draw:hover {
+  background: #222831;
+  color: #00adb5;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.button-draw img {
+  vertical-align: middle;
+  width: 22px;
+  margin-right: 6px;
+  filter: drop-shadow(0 2px 6px #00adb5cc);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+.name-list li {
+  background: #232526;
+  margin-bottom: 8px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.18rem;
+  box-shadow: 0 1px 6px rgba(0,173,181,0.10);
+  border: 1px solid #393e46;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.name-list li:hover {
+  box-shadow: 0 2px 12px #00adb544;
+  border: 1.5px solid #00adb5;
+}
+
+.btn-eliminar {
+  background: #393e46;
+  color: #00adb5;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1.08rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-eliminar::before {
+  content: "✖";
+  margin-right: 4px;
+}
+.btn-eliminar:hover {
+  background: #00adb5;
+  color: #232526;
+  transform: scale(1.08);
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.result-list li {
+  background: #00adb5;
+  color: #232526;
+  font-weight: 900;
+  font-size: 1.45rem;
+  border-radius: 12px;
+  padding: 22px 32px;
+  margin-top: 14px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0,173,181,0.18);
+  animation: reveal 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+  letter-spacing: 1px;
+}
+@keyframes reveal {
+  0% { opacity: 0; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.section-title, .main-title {
+  text-shadow: 0 2px 8px #00adb544;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  body, html {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .main-content {
+    margin: 0;
+    padding: 24px 4vw 24px 4vw;
+  }
+  .main-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.1rem;
+  }
+  .input-name {
+    font-size: 1rem;
+    padding: 12px 10px;
+  }
+  .button-add, .button-draw {
+    font-size: 1rem;
+    padding: 12px 10px;
+  }
+  .name-list li {
+    font-size: 1rem;
+    padding: 10px 10px;
+  }
+  .btn-eliminar {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+  .result-list li {
+    font-size: 1.1rem;
+    padding: 12px 10px;
+  }
+}
